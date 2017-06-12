@@ -16,5 +16,8 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('dec') dec: ElementRef;
 
   ngAfterViewInit(): void {
+    const inc$ = Observable.fromEvent(this.inc.nativeElement, 'click').mapTo(+1)
+    const dec$ = Observable.fromEvent(this.dec.nativeElement, 'click').mapTo(-1)
+    this.total$ = Observable.merge(inc$, dec$).scan((total, val) => total + val)
   }
 }
