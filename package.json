@@ -12,6 +12,8 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-redux/router": "^6.3.0",
+    "@angular-redux/store": "^6.4.5",
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
